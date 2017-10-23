@@ -28,15 +28,13 @@
 			<div class="slides">
 				<section>
 					<h2>Introduction to programming using Python</h2>
-					<h3>Session 1</h3>
+					<h3>23/10/2017</h3>
                     <p>Matthieu Choplin</p>
-                    <p><a href='http://pythonguy.com/'>http://pythonguy.com/</a></p>
 				</section>
 				<section data-markdown>
 ### Recommended reading
 * Books:
  * Automate the boring stuff by Al Sweigart: https://automatetheboringstuff.com/
- * Introduction to programming using Python by Daniel Liang
 * Website:
  * The official python tutorial: https://docs.python.org/3/tutorial/
 				</section>
@@ -45,81 +43,23 @@
 * IDE: Idle first and then Pycharm
 * Online tool: <a href='http://pythontutor.com/'>pythontutor.com</a>
 				</section>
-				<section data-markdown>
-### Objectives
-* Think like a programmer.
-* Introduction to Python. Variables. Loops. Main method. Conditional structures. Data structure.
-* Functions and methods
-* Debugging in Python. How to read a program.
-* File manipulation: Reading and writing files.
-* Object Oriented programming in Python: classes, objects, inheritance, polymorphism, encapsulation.
-* Introduction to the Python standard library.
-* Testing in Python. Presentation of doctest and unittest.
-* Error handling: exceptions.
-				</section>
-				<section data-markdown>
-### Objectives for Session 1
-* To get a brief overview of what Python is
-* To understand computer basics and programs
-* Installing python and introducing IDLE
-* To understand what statement, variable and expressions are
-* To explain the differences between syntax errors, runtime errors, and logic errors.
-* Write your first python program
-				</section>
-
 				<section>
-<h3 style="margin-bottom: 0px;">Python's popularity</h3>
-<p style="margin-bottom: 0px;">Python has been amongst the top 10 programming languages for more than a decade according to the <a href="http://www.tiobe.com/tiobe_index">Tiobe index</a></p>
-<img data-src="imgs/tiobe-index.png" style="background:none; border:none; box-shadow:none;">
-				</section>
-				<section>
-					<h3>Who uses Python?</h3>
-<img data-src="imgs/python-uses.png" style="background:none; border:none; box-shadow:none; margin-top:0px;">
-				</section>
-				<section>
-<h3>Before going more into details... What is a computer? (1/2)</h3>
-An electronic device that is receiving data input, storing (in RAM) and processing (in the CPU) them and producing information in output.
-<img data-src="imgs/comp.png" style="background:none; border:none; box-shadow:none;">
-				</section>
-				<section>
-<h3>What is a computer? (2/2)</h3>
-<img data-src="imgs/comp2.png" style="background:none; border:none; box-shadow:none;">
-				</section>
-				<section data-markdown>
-### What is a program?
-* Computer programs, known as software, are *instructions to* the computer.
-* You tell a computer what to do through programs. Without programs, a computer is an empty machine. Computers do not understand human languages, so you need to use computer languages to communicate with them.
-* Programs are written using programming languages.
-				</section>
-				<section data-markdown>
-### Different types of Programming Languages
-* **Machine language** is a set of primitive instructions built into every computer. The instructions are in the form of binary code.
-The programs in machine language are highly difficult to read and modify.
-For example, to add two numbers, you might write an instruction in binary like this:
-
-     1101101010011010
-
-* **The high-level languages** are English-like and easy to learn and program.
-For example, the following is a high-level language statement that multiply two number:
-      area = 5 * 5
-				</section>
-				<section data-markdown>
-### Computer works using binary logic.
-* It is extremely difficult for humans to program in binary.
-* Computer languages have to be translated to binary logic for the computer to understand.
-* Two types of translation:
- * Compilation
- * Interpretation
-				</section>
-
-				<section>
-<h3>Comparison of interpreted vs compiled</h3>
-<img data-src="imgs/interpreted_vs_compiled.png" style="background:none; border:none; box-shadow:none;">
+					<h3>Objectives</h3>
+					<ul style="font-size: 32px;">
+						<li>11.00-11.15: installing python and getting to know Idle</li>
+						<li>11.15-12.00: declaring variables, using variables, type of objects, expressions, indentations, comments, function "input", ex (computing the area of a room)</li>
+						<li>12.00-12.30/13.00: lunch break</li>
+						<li>13.00-13.10: quiz about what we have seen before lunch</li>
+						<li>13.10-14.00: controlling the flow of execution with conditions (if, else, boolean operators), ex (password and login[1], grading students[2])</li>
+						<li>14.00-15.00: looping with while loop, for loop, ex (improving the login/password exercise)</li>
+						<li>15.30-16.00: lists, dictionaries, ex (guessing the capital)</li>
+						<li>16.00-17.00: class and objects, understanding attributes and methods, ex (creating cars)</li>
+					</ul>
 				</section>
 
 				<section>
 <h3>Installing python (Windows)</h3>
-	<ul style="font-size: 24px;">
+	<ul style="font-size: 32px;">
 		<li>Be sure to download a version of <a href="https://www.python.org/downloads/">Python 3.</a></li>
 		<li>You'll find Python installers for 64-bit and 32-bit computers for each operating system on the download page, so first figure out which installer you need.</li>
 		<li>Here's how to find out for sure:</li>
@@ -135,31 +75,11 @@ For example, the following is a high-level language statement that multiply two 
 	</ul>
 				</section>
 
-				</section>
-				<section>
-<h3>Installing python (OS X)</h3>
-	<ul style="font-size: 24px;">
-		<li>Be sure to download a version of <a href="https://www.python.org/downloads/">Python 3.</a></li>
-		<li>You'll find Python installers for 64-bit and 32-bit computers for each operating system on the download page, so first figure out which installer you need.</li>
-		<li>Here's how to find out for sure:</li>
-		<ul>
-			<li>Go the Apple menu, select About This Mac > More Info > System Report > Hardware, and then look at the Processor Name field. If it says Intel Core Solo or Intel Core Duo, you have a 32-bit machine. If it says anything else (including Intel Core 2 Duo), you have a 64-bit machine.</li>
-		</ul>
-		<li>Download the .dmg file that’s right for your version of OS X and double-click it. Follow the instructions the installer displays on the screen to install Python.</li>
-		<ul>
-			<li>When the DMG package opens in a new window, double-click the Python.mpkg file. You may have to enter the administrator password.</li>
-			<li>Click Continue through the Welcome section and click Agree to accept the license.</li>
-			<li>Select HD Macintosh (or whatever name your hard drive has) and click Install.</li>
-		</ul>
-	</ul>
-				</section>
-
 				<section>
 <h3>Starting IDLE</h3>
-	<ul style="font-size: 24px;">
+	<ul style="font-size: 32px;">
 		<li>While the Python interpreter is the software that runs your Python programs, the interactive development environment (IDLE) software is where you’ll enter your programs, much like a word processor. Let’s start IDLE now.</li>
 		<li>On Windows 7 or newer, click the Start icon in the lower-left corner of your screen, enter IDLE in the search box, and select IDLE (Python GUI).</li>
-		<li>On Mac OS X, open the Finder window, click Applications, click Python 3.4, and then click the IDLE icon.</li>
 	</ul>
 				</section>
 
@@ -217,15 +137,6 @@ For example, the following is a high-level language statement that multiply two 
 					</table>
 				</section>
 
-				<section>
-                    <h3>The % (modulo or remainder) operator (1/2)</h3>
-					<img data-src="imgs/modulo_operator.png" style="background:none; border:none; box-shadow:none;">
-				</section>
-				<section>
-                    <h3>The % (modulo or remainder) operator (2/2)</h3>
-					<p><strong>Remainder or Modulo</strong> is very useful in programming. For example, an even number % 2 is always 0 and an
-						odd number % 2 is always 1. So you can use this property to determine whether a number is even or odd.</p>
-				</section>
 				<section>
                     <h3>Arithmetic expressions</h3>
 					<img data-src="imgs/arithmetic_expression.png" style="background:none; border:none; box-shadow:none;">
@@ -444,7 +355,7 @@ print("indented properly ")</code></pre>
 <p>You can also comment multiple lines using <strong>'''</strong> (triple quote) before and after the commented paragraph</p>
 <p>Example</p>
 										<pre class="solution-content python"><code>print("This line is not commented")
-# print("This line will not do anythin")
+# print("This line will not do anything")
 '''
 print("Nothing to see here")
 print("""This whole block is commented.
@@ -453,31 +364,6 @@ And it will not show anything when we run the program""")
 </code></pre>
 				</section>
 
-				<section>
-<h3> The different type of errors (1/3)</h3>
- Syntax Error
-	 <p>For example, when we forget a quote to close a string</p>
-	 <pre><code data-trim data-noescape>print("Welcome to Python)</code></pre>
-				</section>
-				<section>
-				<h3> The different type of errors (2/3)</h3>
-				Runtime Error
-				 <p>For example a division by zero (which is impossible)</p>
-				<pre><code data-trim data-noescape>print(1/0)</code></pre>
-				</section>
-				<section>
-					<h3> The different type of errors (3/3)</h3>
-					Logic error
-					<p>When a program is not doing what we want it to do.</p>
-					<p>For instance, a wrong formulae for converting pound in kg</p>
-					<pre><code data-trim data-noescape>pounds = float(input("Enter weight in pound: "))
-# convert pound in kilogramme
-kilograms = pounds / 0.454</code></pre>
-					<p>It should be:</p>
-					<pre><code data-trim data-noescape>pounds = float(input("Enter weight in pound: "))
-# convert pound in kilogramme
-kilograms = pounds * 0.454</code></pre>
-				</section>
 				<section>
 					<h3> Exercise:</h3>
 					<p>
@@ -500,7 +386,1586 @@ kilograms = pounds * 0.454</code></pre>
 						Hint: we are going to need the function <strong>input</strong> and the function <strong>float</strong>
 						</li>
 					</ul>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code>rate = 0.8
+pounds = float(
+    input("Enter the amount you would like to convert and press ENTER "))
+euros = pound * rate
+print(pounds, "pounds is", euros, "euros")</code></pre>
+					</div>
 				</section>
+
+				<section>
+					<h3>Lunch break?</h3>
+				</section>
+
+				<section>
+					<h3>Quiz</h3>
+				</section>
+
+				<section data-markdown>
+### Quiz (1)
+
+* Which of the following are operators, and which are values?
+
+ - *
+ - 'hello'
+ - -88.8
+ - -
+ - /
+ - +
+ - 5
+				</section>
+
+				<section data-markdown>
+### Quiz (2)
+
+* Which of the following is a variable, and which is a string?
+
+ - spam
+ - 'spam'
+
+				</section>
+
+				<section data-markdown>
+### Quiz (3)
+
+* Name three data types.
+				</section>
+
+				<section data-markdown>
+### Quiz (4)
+
+* What does the variable bacon contain after the following code runs?
+
+```
+bacon = 20
+bacon + 1
+```
+                </section>
+
+				<section data-markdown>
+### Quiz (5)
+
+* How do you call a function?
+                </section>
+
+				<section data-markdown>
+### Quiz (6)
+
+* What function can you use to take a value from a user? For example, how can you ask the age of a user and store it into a variable?
+                </section>
+
+				<section>
+					<h3> Exercise: finding and fixing a bug (due to a logical error)</h3>
+					<ul>
+						<li>
+						Explain what this program is supposed to do and what the bug is here:
+						</li>
+					</ul>
+
+<pre class="solution-content python"><code>vat_rate = 20/100
+car_price = 34500
+# compute the gross value of the car by removing
+# the tax value from the car_price
+car_price * (1 - vat_rate)
+print("The gross value of the car is",
+	car_price, "pounds")
+</code></pre>
+				</section>
+
+                <section>
+                    <h3>Controlling the flow of our programs</h3>
+                    <p>We can represent the flow of execution with a flow chart</p>
+                    <img data-src="imgs/flow_chart.png" style="background:none; border:none; box-shadow:none;">
+                </section>
+                <section>
+                    <h3>Structure of a simple if statement</h3>
+                    <p>Pseudo code:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if condition:
+    # statement (mind the indentation)</code></pre>
+                    <p>Example, representation of the flow chart example in python code:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if name=='Alice':
+    print('Hi Alice')</code></pre>
+                </section>
+                <section>
+                    <h3>The two-way if statement</h3>
+                    <p>Pseudo code:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if condition:
+    # statement (mind the indentation)
+else:
+    # statement executed when the condition is False
+                    </code></pre>
+                    <p>Example, representation of the flow chart example in python code with an else statement:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if name=='Alice':
+    print('Hi Alice')
+else:
+    print('Hi')</code></pre>
+                </section>
+                <section>
+                    <h3>Multiple Alternative if Statements</h3>
+                    <p>The naive way</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if condition:
+    # statement (mind the indentation)
+else:
+    if condition:
+        # statement executed when
+        # the previous condition is False
+    else:
+        # statement executed when none of
+        # the previous condition is verified
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Multiple Alternative if Statements</h3>
+                    <p>The better way, the pythonc way</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>if condition:
+    # statement (mind the indentation)
+elif condition:
+    # statement executed when
+    # the previous condition is False
+elif condition:
+    # statement executed when none of
+    # the previous condition is verified
+else:
+    # executed when all conditions are False</code></pre>
+                </section>
+				<section>
+                    <h3>Value of the condition</h3>
+                    <p>The program will execute the statement only if the condition is verified. Only if the condition is True.</p>
+                    <p>The condition is actually a <strong>boolean</strong>.</p>
+				</section>
+				<section>
+                    <h3>The Boolean Type</h3>
+                    <ul>
+                        <li>It has only 2 possible values: <strong>True</strong> or <strong>False</strong>.
+                            Notice that they are both capitalized, which is important because Python is case sensitive</li>
+                        <li>It is often obtained as a result of a comparison expression.</li>
+                    </ul>
+				</section>
+				<section>
+                    <h3>The Comparison Operators</h3>
+					<table style="width:100%">
+					  <tr>
+						<th>Operator</th>
+						<th>Meaning</th>
+					  </tr>
+					  <tr>
+						<td>&lt;</td>
+						<td>less than</td>
+					  </tr>
+					  <tr>
+						<td><=</td>
+						<td>less than or equal</td>
+					  </tr>
+					  <tr>
+						<td>&gt;</td>
+						<td>greater than</td>
+					  </tr>
+					  <tr>
+						<td>&gt;=</td>
+						<td>greater than or equal</td>
+					  </tr>
+					  <tr>
+						<td>==</td>
+						<td>equal to</td>
+					  </tr>
+					  <tr>
+						<td>!=</td>
+						<td>not equal to</td>
+					  </tr>
+					</table>
+				</section>
+                <section>
+                    <h3>Examples</h3>
+                    <pre class="solution-content python"><code data-trim data-noescape>'hello' == 'hello'
+'hello' == 'Hello'
+'dog' != 'cat'
+True == True
+True != False
+42 == 42.0
+42 == '42'</code></pre>
+                </section>
+                <section>
+                    <h3>Difference between '==' and '='</h3>
+                    <ul>
+                        <li>The sign <strong>=</strong> is the sign of <strong>assignment</strong>, it is used for assigning a value to a variable</li>
+                        <li>The sign <strong>==</strong> is the sign of <strong>comparison</strong>, it compares 2 values and return a boolean (True or False)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Exercise: password</h3>
+                    <p>Create a program that ask the user for a password.</p>
+                    <ul>
+                        <li>Have the password defined in "clear" in your program, in a variable called "PASSWORD"</li>
+                        <li>Use input() to receive the password entered by the user</li>
+                        <li>If the word entered by the user matches the password, display "Access Granted", else, "Forbidden"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Solution: password</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code data-trim data-noescape>PASSWORD = 'super_password123'
+password_entered = input("Enter the password: ")
+if password_entered == PASSWORD:
+    print("Access Granted")
+else:
+    print("Forbidden")
+                    </code></pre>
+					</div>
+                </section>
+                <section>
+                    <h3>Truth tables</h3>
+                    <p>Show every possible result of a Boolean operator.</p>
+                    <h4>The <strong>and</strong> Operator’s Truth Table</h4>
+                    <table>
+                    <tr>
+                        <th>Expression</th>
+                        <th>Evaluates to...</th>
+                    </tr>
+
+
+                    <tr>
+                        <td>True and True</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>True and False</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>False and True</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>False and False</td>
+                        <td>False</td>
+                    </tr>
+                    </table>
+                </section>
+                <section>
+                    <h4>The <strong>or</strong> Operator’s Truth Table</h4>
+                    <table>
+                    <tr>
+                        <th>Expression</th>
+                        <th>Evaluates to...</th>
+                    </tr>
+                    <tr>
+                        <td>True or True</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>True or False</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>False or True</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>False or False</td>
+                        <td>False</td>
+                    </tr>
+                    </table>
+                </section>
+                <section>
+                    <h4>The <strong>not</strong> Operator</h4>
+                    <p>It operates on only one Boolean value (or expression).
+                        The not operator simply evaluates to the opposite Boolean value.</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>not True
+not not True
+not 1 != 2
+</code></pre>
+                </section>
+                <section>
+                    <h3>Exercise: password and login</h3>
+                    <p>Create a program that ask the user for a login and password.</p>
+                    <ul>
+                        <li>Have the password "PASSWORD" AND login "LOGIN" defined in "clear" in your program, in variables</li>
+                        <li>Use input() to receive the password and login entered by the user</li>
+                        <li>If login and password match the values of your PASSWORD and LOGIN, display "Access Granted", else, "Forbidden"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Solution: password and login</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code data-trim data-noescape>PASSWORD = 'super_password123'
+LOGIN = 'superadmin'
+login_entered = input("Enter the login: ")
+password_entered = input("Enter the password: ")
+if password_entered == PASSWORD \
+    and login_entered == LOGIN:
+    print("Access Granted")
+else:
+    print("Forbidden")
+                    </code></pre>
+					</div>
+                </section>
+
+                <section>
+                    <h3>Exercise: grading students</h3>
+                    <p>Write a program that is going to give the grade of a student according to the score obtained.</p>
+                    <ul>
+                        <li>Display 'A' if the score is greater than 90</li>
+                        <li>Display 'B' if the score is between 80 and 90</li>
+                        <li>Display 'C' if the score is between 70 and 80</li>
+                        <li>Display 'D' if the score is between 60 and 70</li>
+                        <li>Display 'F' if the score is lower than 60</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Solution: grading students</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code data-trim data-noescape>score = int(input("Enter the score: "))
+if score >= 90.0:
+    grade = 'A'
+elif score >= 80.0:
+    grade = 'B'
+elif score >= 70.0:
+    grade = 'C'
+elif score >= 60.0:
+    grade = 'D'
+else:
+    grade = 'F'
+print('The grade is ', grade)
+</code></pre>
+					</div>
+                </section>
+
+				<section>
+					<h3>Quiz</h3>
+
+				</section>
+
+				<section data-markdown>
+### Quiz (1)
+
+* What are the two values of the **Boolean data type**? How do you write them?
+				</section>
+
+				<section data-markdown>
+### Quiz (2)
+
+* What are the three **Logical Boolean operators**?
+				</section>
+
+				<section data-markdown>
+### Quiz (3)
+
+* What do the following expressions evaluate to?
+
+ - (5 > 4) and (3 == 5)
+ - not (5 > 4)
+ - (5 > 4) or (3 == 5)
+ - not ((5 > 4) or (3 == 5))
+ - (True and True) and (True == False)
+ - (not False) or (not True)
+				</section>
+
+				<section data-markdown>
+### Quiz (4)
+
+* Give examples of **comparison operators**?
+				</section>
+
+				<section data-markdown>
+### Quiz (5)
+
+* What is the difference between the **"equal to"** operator and the **"assignment"** operator?
+				</section>
+
+				<section data-markdown>
+### Quiz (6)
+
+* Explain what a **condition** is and where you would use one.
+				</section>
+
+				<section>
+					<h3> Quiz (7)</h3>
+
+<p> What is wrong in the following code? What happened if you run it?</p>
+
+<div ><pre ><code>radius = -20
+if radius > 0:
+    area = radius * radius * 3.14
+print("The area is", area)
+</code></pre></div>
+				</section>
+
+                <section>
+					<ul>
+                        <li>Looping with <strong>while</strong></li>
+                        <li>Looping with <strong>for</strong></li>
+					</ul>
+				</section>
+
+                <section>
+                    <h3>Motivation</h3>
+					<p>On one of our previous programs, we asked the user to enter a password.</p>
+					<ul>
+						<li>If the password was correct, we printed "Access Granted"</li>
+						<li>Else, we printed, "Forbidden"</li>
+					</ul>
+					<div ><pre style="margin-bottom: 0px; font-size: 22px;"><code>PASSWORD = 'super_password123'
+password_entered = input("Enter the password: ")
+if password_entered == PASSWORD:
+    print("Access Granted")
+else:
+    print("Forbidden")</code></pre></div>
+				</section>
+				<section>
+                    <h3>Motivation</h3>
+					<p>However, the user only had <em>one chance</em> to enter a correct password.
+						If the password was incorrect or correct, the program would stop.</p>
+					<p>What if we want to make the user able to try more than once to enter a correct password?</p>
+				</section>
+				<section>
+                    <h3 style="margin-bottom: 0px;">Structure of the while loop, flow chart</h3>
+					<img data-src="imgs/flow_chart_loop.png" style="background:none; border:none; box-shadow:none;">
+				</section>
+
+				<section>
+                    <h3>Structure of the while loop</h3>
+					<div ><pre ><code>while condition:
+    # statement</code></pre></div>
+					<p>Where:</p>
+					<ul>
+						<li>The <strong>condition</strong> is an expression that takes the value True or False (boolean)</li>
+						<li>The <strong>statement</strong> does something, mind the <strong>indentation</strong></li>
+						<li><strong>While</strong> the condition is True, the <strong>statement</strong> or <strong>body</strong> of the <strong>loop</strong> is executed</li>
+						<li>Each time that the body of the loop is executed is an <strong>iteration</strong></li>
+					</ul>
+				</section>
+				<section>
+                    <h3>The while loop applied to our problem</h3>
+					<div ><pre ><code>PASSWORD = 'super_password123'
+password_entered = ''
+while password_entered!=PASSWORD:
+    password_entered = input("Enter the password: ")
+    if password_entered == PASSWORD:
+        print("Access Granted")
+    else:
+        print("Forbidden")</code></pre></div>
+					<p>Where:</p>
+					<ul>
+						<li>The <strong>condition</strong> is the boolean value given by the comparison of the password_entered compared to PASSWORD</li>
+					</ul>
+				</section>
+				<section>
+                    <h3 style="margin-bottom: 0px;">Structure of the while loop, flow chart</h3>
+					<img data-src="imgs/flow_chart_loop_ex.png" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+                    <h3>Reminder: using variable</h3>
+					<p>You cannot use a variable that has not been declared</p>
+					<div ><pre ><code>PASSWORD = 'super_password123'
+while password_entered!=PASSWORD:
+    password_entered = input("Enter the password: ")
+    if password_entered == PASSWORD:
+        print("Access Granted")
+    else:
+        print("Forbidden")</code></pre></div>
+					<p>Can you see why this is wrong? Try to run this program. See the error and explain what you need to correct.</p>
+				</section>
+				<section>
+                    <h3>Reminder: using variable</h3>
+					<p>You need to declare the variable <em>password_entered</em> before using it, else, you get:</p>
+					<pre>NameError: name 'password_entered' is not defined</pre>
+					<div ><pre ><code>PASSWORD = 'super_password123'
+password_entered = ''
+while password_entered!=PASSWORD:
+    password_entered = input("Enter the password: ")
+    if password_entered == PASSWORD:
+        print("Access Granted")
+    else:
+        print("Forbidden")</code></pre></div>
+				</section>
+				<section>
+                    <h3>How to avoid infinite loop</h3>
+					<p>Make sure that the condition gets False at some point during the execution of the program</p>
+					<p>You can implement a counter, to limit the number of <strong>iterations</strong>:</p>
+					<div ><pre style="margin-bottom: 0px; font-size: 22px;"><code>counter=0
+while counter < 5:
+    counter = counter + 1 # that you can also write counter+=1
+    print('test infinite loop')</code></pre></div>
+					<p style="margin-bottom: 0px; font-size: 28px;">NB: <code>counter = counter + 1</code> is equivalent to <code>counter += 1</code></p>
+					<p>We say that we <strong>increment</strong> the counter at each <strong>iteration</strong></p>
+				</section>
+				<section>
+                    <h3>The keyword break</h3>
+					<p>Instead of a condition, you can also use the keyword <strong>break</strong> to end the iteration of a loop.</p>
+<div ><pre style="margin-bottom: 0px; font-size: 22px;"><code>while True:
+    print('Please type your name.')
+    name = input()
+    if name == 'your name':
+        break
+print('Thank you!')</code></pre></div>
+				</section>
+				<section>
+                    <h3>The keyword continue</h3>
+					<p>You can use the keyword <strong>continue</strong> to ignore the remaining code in the iteration and jump to the next iteration</p>
+					<div ><pre style="margin-bottom: 0px; font-size: 22px;"><code>sum = 0
+number = 0
+while number < 3:
+    number += 1
+    if (number ==2):
+        continue
+    sum += number
+print("The sum is ", sum)</code></pre></div>
+				</section>
+				<section>
+                    <h3>Combining break and continue</h3>
+					<div ><pre style="margin-bottom: 0px; font-size: 22px;"><code>while True:
+  print('Who are you?')
+  name = input()
+  if name != 'Joe':
+    continue
+  print('Hello, Joe. What is the password? (It is a fish.)')
+  password = input()
+  if password == 'swordfish':
+    break
+print('Access granted.')</code></pre></div>
+				</section>
+				<section>
+                    <h3>Exercise: quit the program with <strong>Q</strong></h3>
+					<p>Enable the use to enter some text and only quit the program if he clicks on "q" or "Q"</p>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Hint</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide hint</p>
+                        <p class="solution-content python">Use the <strong>break</strong> keyword.</p>
+					</div>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code data-trim data-noescape>while True:
+    my_input = input('Type "q" or "Q" to quit: ')
+    if my_input.upper() == "Q":
+        break</code></pre>
+					</div>
+				</section>
+				<section>
+                    <h3>Sentinel value</h3>
+					<p>This is what you have just used in the previous exercise.</p>
+					<p>A sentinel value is a value entered by the user (with input) that will make the program stop. You can put a sentinel value in your loop to decide when you want to <strong>break</strong> it, to stop it.</p>
+				</section>
+
+				<section>
+                    <h3>Structure of the for loop</h3>
+					<div ><pre class="solution-content python"><code>for element in sequence:
+    # statement</code></pre></div>
+					<p>Where:</p>
+					<ul>
+						<li><strong>element</strong> is a variable that is going to take the value of each element of the sequence</li>
+						<li><strong>element</strong> is NOT a keyword, it is a variable name, so you can give it whatever name you want</li>
+						<li>the keywords are <strong>for</strong> and <strong>in</strong></li>
+						<li>notice the indentation that indicates the <strong>body</strong> of the loop (same as for <strong>while</strong>)</li>
+					</ul>
+				</section>
+				<section>
+                    <h3>Example: a string is a sequence</h3>
+					<p>A string is a sequence of characters on which we can iterate.</p>
+					<p>The value of <strong>element</strong> is going to be the value of each character of the string (each letter of the word) successively</p>
+					<div ><pre class="solution-content python"><code>for element in ('matt'):
+  if element not in 'aeiou'):
+    print(element)</code></pre></div>
+				</section>
+				<section>
+                    <h3>The function range</h3>
+					<p>You can create a sequence of numbers with the function <strong>range()</strong></p>
+					<div ><pre class="solution-content python"><code>for element in range(initialValue, endValue, step):
+    # statement</code></pre></div>
+					<p>Where:</p>
+					<ul>
+						<li><strong>initialValue</strong> and step value are optional arguments</li>
+						<li>The default initialValue is 0 and the <strong>endValue</strong> is excluded from the interval</li>
+						<li><strong>step</strong> represents the increment and can be positive or negative</li>
+					</ul>
+				</section>
+				<section>
+                    <h3>Example: range(initialValue, endValue)</h3>
+					<p>Notice how the endValue is excluded</p>
+					<div ><pre class="solution-content python"><code>for v in range(4, 8):
+  print(v)</code></pre></div>
+				</section>
+				<section>
+                    <h3>Example: range(initialValue, endValue, step)</h3>
+					<p>Step specifies the increment</p>
+					<div ><pre class="solution-content python"><code>for v in range(3, 9, 2):
+  print(v)</code></pre></div>
+				</section>
+				<section>
+                    <h3>Exercise: conversion from miles to kilometers</h3>
+					<p>Write a program that displays the following table (note that 1 mile is 1.609 kilometres):</p>
+					<pre>Miles Kilometres
+1 1.609
+2 3.218
+...
+9 15.481
+10 16.090</pre>
+				</section>
+				<section>
+                    <h3>Solution: conversion from miles to kilometers</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+						<p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+<pre class="solution-content python"><code data-trim data-noescape>print("Miles"+ "   " + "Kilometers")
+miles = 1
+while miles <= 10:
+    print(str(miles) + "   "+  str(miles * 1.609))
+    miles += 1
+</code></pre>
+					</div>
+				</section>
+
+			<section>
+				<h3>Writing our own functions</h3>
+			</section>
+
+				<section>
+                    <h3 style="margin-bottom: 0px;">Built in functions seen so far</h3>
+					<table style="width:100%">
+					  <tr>
+						<th>Input/Ouput</th>
+						<th>Conversion type:</th>
+						<th>Introspection:</th>
+					  </tr>
+					  <tr>
+						<td>input()</td>
+						<td>int()</td>
+						<td>type()</td>
+					  </tr>
+					  <tr>
+						<td>print()</td>
+						<td>float()</td>
+						<td></td>
+					  </tr>
+					</table>
+					<p>All the built in functions:
+						<a target="_blank" href="https://docs.python.org/3.6/library/functions.html">https://docs.python.org/3.6/library/functions.html</a></p>
+				</section>
+				<section>
+                    <h3>Defining our own function</h3>
+                    <p>To define a function, we use the keyword <strong>def</strong>, the name of the function, the brackets, and the colon</p>
+                    <p>Then the body of the function needs to be indented</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>def name_of_the_function():
+    # body of the function</code></pre>
+                    <p>When we define a function, we just make python see that the function exist but it is not executed</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>def my_function():
+  print("THIS IS MY FUNCTION")
+                    </code></pre>
+				</section>
+				<section>
+                    <h3>Calling our own function</h3>
+                    <p>To call or execute or run a function, we use the name of the function AND the brackets, without the brackets, the function is not called.</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>name_of_the_function()</code></pre>
+                    <p>Notice the difference between defining and calling a function</p>
+                    <pre class="solution-content python"><code data-trim data-noescape>def my_function():
+  print("THIS IS MY FUNCTION")
+
+my_function()</code></pre>				</section>
+
+                <section>
+                    <h3>Defining and Calling Functions</h3>
+                    <p>A function is a collection of statements that are grouped together to perform an operation.</p>
+                    <img src="imgs/function_def.png" style="background:none; border:none; box-shadow:none; margin-top:0px;" />
+				</section>
+
+                <section>
+                    <h3>How a function gets called</h3>
+                    <iframe width=100% height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=def+max(num1,+num2%29%3A%0D%0A++++%23+Return+the+max+between+two+numbers+%0D%0A++++if+num1+%3E+num2%3A%0D%0A++++++++result+%3D+num1%0D%0A++++else%3A%0D%0A++++++++result+%3D+num2%0D%0A%0D%0A++++return+result%0D%0A%0D%0Adef+main(%29%3A%0D%0A++++i+%3D+5%0D%0A++++j+%3D+2%0D%0A++++k+%3D+max(i,+j%29+%23+Call+the+max+function%0D%0A++++print(%22The+maximum+between%22,+i,+%22and%22,+j,+%22is%22,+k%29%0D%0A%0D%0Amain(%29+%23+Call+the+main+function%0D%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
+                </section>
+
+                <section>
+                    <h3>Functions With/Without Return Values</h3>
+                    <ul>
+                        <li>A function with the <strong>return</strong> keyword explicitly return a <strong>value</strong>. For example the function max() in the previous program.</li>
+                        <li>A function <strong>does something</strong> but does not return a value. For example the function main() in the previous program.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Example of a function that does something without returning a value</h3>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def printGrade(score):
+    # Print grade for the score
+    if score >= 90.0:
+        print('A')
+    elif score >= 80.0:
+        print('B')
+    elif score >= 70.0:
+        print('C')
+    elif score >= 60.0:
+        print('D')
+    else:
+        print('F')
+
+def main():
+    score = eval(input("Enter a score: "))
+    print("The grade is ", end = "")
+    printGrade(score)
+
+main() # Call the main function</code></pre>
+                </section>
+
+                <section>
+                    <h3>Example of a function that returns a value</h3>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def getGrade(score):
+    # Return the grade for the score
+    if score >= 90.0:
+        return 'A'
+    elif score >= 80.0:
+        return 'B'
+    elif score >= 70.0:
+        return 'C'
+    elif score >= 60.0:
+        return 'D'
+    else:
+        return 'F'
+
+def main():
+    score = eval(input("Enter a score: "))
+    print("The grade is", getGrade(score))
+
+main() # Call the main function
+</code></pre>
+                </section>
+
+                <section>
+                    <h3>The None Value</h3>
+                    <p>A function that does not return a value is known as a void function.  In Python, such function returns a special None.</p>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def sum(number1, number2):
+    total = number1 + number2
+
+print(sum(1, 3))</code></pre>
+                </section>
+
+                <section>
+                    <h3>Passing Arguments by Positions</h3>
+                    <p>Suppose you have the following function:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def nPrintln(message, n):
+    for i in range(0, n):
+        print(message)</code></pre>
+                    <p>What is the output of <strong>nPrintln("Welcome to Python", 5)</strong>?</p>
+                    <p>What is the output of <strong>nPrintln(15, "Computer Science")</strong>?</p>
+                    <p>What is wrong? How to fix?</p>
+                </section>
+
+                <section>
+                    <h3>Keyword Arguments</h3>
+                    <p>With the same function:</p>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def nPrintln(message, n):
+    for i in range(0, n):
+        print(message)</code></pre>
+                    <p>What is the output of <strong>nPrintln(message="Welcome to Python", n=5)</strong></p>
+                    <p>What is the output of <strong>nPrintln(n = 4, message = "Computer Science")</strong></p>
+                    <p>What is wrong? How to fix?</p>
+                </section>
+
+                <section>
+                    <h3>Default Arguments</h3>
+                    <p>Python allows you to define functions with default argument values. The default values are passed to the parameters when a function is invoked without the arguments.</p>
+                    <pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def printArea(width = 1, height = 2):
+    area = width * height
+    print("width:", width, "\theight:", height, "\tarea:", area)
+
+printArea() # Default arguments width = 1 and height = 2
+printArea(4, 2.5) # Positional arguments width = 4 and height = 2.5
+printArea(height = 5, width = 3) # Keyword arguments width
+printArea(width = 1.2) # Default height = 2
+printArea(height = 6.2) # Default widht = 1
+</code></pre>
+                </section>
+
+				<section>
+                    <h3>Exercise: Guess Number</h3>
+					<p>Make a program to ask the user to guess the number that has been randomly generated.</p>
+					<p>Start from this file: <a href="exercises/GuessNumber.py">GuessNumber.py</a> (right click and save as)</p>
+					<ul>
+						<li>The user will be able to try continuously until he finds the correct number.</li>
+						<li>The program will stop as soon as the number is found, i.e. as soon as the random number matches the entered number</li>
+						<li>At each iteration, i.e. each time the user tries a number and presses enter, the program will say if the number is too high, too low or correct</li>
+					</ul>
+				</section>
+				<section>
+                    <h3>Solution: Guess Number</h3>
+                    <div class="solution">
+                        <p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Show solution</p>
+                        <p class="hide-solution"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+                        <pre class="solution-content python"><code>import random
+
+# Generate a random number to be guessed
+number = random.randint(1, 100)
+
+def guess_number():
+    print("Guess a magic number between 0 and 100")
+    guess = -1
+    while guess != number:
+        guess = int(input("Enter your guess: "))
+        if guess == number:
+            print("Yes, the number is", number)
+        elif guess > number:
+            print("Your guess is too high")
+        else:
+            print("Your guess is too low")
+guess_number()
+                        </code></pre>
+                </div>
+				</section>
+
+				<section>
+					<h3>Introducting the class and object concepts with the List</h3>
+				</section>
+
+				<section>
+					<h3>What is the difference between an object and a type?</h3>
+					<p>A <strong>type</strong> or a <strong>class</strong> is what is going to create an object</p>
+					<p>Built in types and objects seen so far:</p>
+					<table>
+						<th>
+							Types
+						</th>
+						<th>
+							Objects
+						</th>
+						<th>
+							Constructor
+						</th>
+						<tr>
+							<td>Integer</td>
+							<td>1, 3, 4, 5, 999, -3, -4</td>
+							<td>int()</td>
+						</tr>
+						<tr>
+							<td>Float</td>
+							<td>1.333, -0.5, 0.001</td>
+							<td>float()</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>"Foo", 'bar', ""</td>
+							<td>str()</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h3>An object has methods</h3>
+					<p>You can find the method of an object with the function <strong>dir()</strong>, which returns the attributes of an object.</p>
+					<div ><pre ><code>>>> dir("abc")
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']</code></pre></div>
+					<p>NB: the dunder methods (with double underscore), are "special methods" in python that can be overridden. We will come back on that later.</p>
+				</section>
+				<section>
+					<h3>Difference between methods of objects and <a href="https://docs.python.org/3.5/library/functions.html">builtin functions</a></h3>
+					<p>The methods of an object can <strong>only be called on an object</strong>.</p>
+					<div><pre class="solution-content python"><code>>>> "speak louder".upper()
+'SPEAK LOUDER'</code></pre></div>
+					<p>A <strong>builtin function</strong> does not need an object to be called.</p>
+					<div><pre class="solution-content python"><code>>>> len("number of character")
+19</code></pre></div>
+					<p>NB: <strong>len()</strong> give the number of element in a sequence</p>
+				</section>
+				<section>
+					<h3>The type List</h3>
+					<p>Creating list using the list constructor</p>
+					<div><pre class="solution-content python"><code>list1 = list() # Create an empty list
+list2 = list([2, 3, 4]) # Create a list with elements 2, 3, 4
+list3 = list(["red", "green", "blue"]) # Create a list of strings
+list4 = list(range(3, 6)) # Create a list with elements 3, 4, 5
+list5 = list("abcd") # Create a list with characters a, b, c</code></pre></div>
+					<p>That is the equivalent of:</p>
+					<div><pre class="solution-content python"><code>list1 = [] # Same as list()
+list2 = [2, 3, 4] # Same as list([2, 3, 4])
+list3 = ["red", "green"] # Same as list(["red", "green"])</code></pre></div>
+				</section>
+				<section>
+					<h3>The List methods</h3>
+					<p>You can find the different methods of a list thanks to the function <strong>dir()</strong></p>
+					<div><pre class="solution-content python"><code>>>> dir([])
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']</code></pre></div>
+					<p>We are going to look at: 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort'</p>
+				</section>
+				<section>
+					<h3>How to see what a method can do</h3>
+					<p>Look at the builtin help:</p>
+					<div><pre class="solution-content python"><code>>>> help([].append)
+Help on built-in function append:
+
+append(...) method of builtins.list instance
+    L.append(object) -> None -- append object to end</code></pre></div>
+				<p>Experiment in the interpreter:</p>
+					<div><pre class="solution-content python"><code>my_list = ["foo", "bar", 124, []]
+print(my_list)
+my_list.append("abc")
+print(my_list)</code></pre></div>
+				</section>
+				<section>
+					<h3>Summary of the list methods</h3>
+					<table style="font-size: 24px">
+						<tr>
+							<td style="width: 30%;"><strong>append</strong>(x: object): None</td>
+							<td>Add an item x to the end of the list.</td>
+						</tr>
+						<tr>
+							<td><strong>insert</strong>(index: int, x: object): None</td>
+							<td>Insert an item x at a given index. Note that the first element in the list has index 0.</td>
+						</tr>
+						<tr>
+							<td><strong>remove</strong>(x: object): None</td>
+							<td>Remove the first occurrence of the item x from the list.</td>
+						</tr>
+						<tr>
+							<td><strong>index</strong>(x: object): int</td>
+							<td>Return the index of the item x in the list.</td>
+						</tr>
+						<tr>
+							<td><strong>count</strong>(x: object): int</td>
+							<td>Return the number of times item x appears in the list.</td>
+						</tr>
+						<tr>
+							<td><strong>sort</strong>(): None</td>
+							<td>Sort the items in the list.</td>
+						</tr>
+						<tr>
+							<td><strong>reverse</strong>(): None</td>
+							<td>Reverse the items in the list.</td>
+						</tr>
+						<tr>
+							<td><strong>extend</strong>(L: list): None</td>
+							<td>Append all the items in list L to the list.</td>
+						</tr>
+						<tr>
+							<td><strong>pop</strong>([i]): object</td>
+							<td>Remove the item at the given position and return it. The square bracket denotes that parameter is optional. If no index is specified, list.pop() removes and returns the last item in the list.</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h3>Exercise </h3>
+					<p style="font-size: 26px">Write a program that reads integers from the user and stores them in a list (use input() and append()). Your program should continue reading values until the user enters 'q' (the sentinel value).
+						Then it should display all of the values entered by the user in order from smallest to largest, with one value appearing on each line. Use either the sort method or the sorted
+built in function to sort the list.</p>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Solution</p>
+						<p class="hide-solution" style="margin-top: 0px; margin-bottom: 0px;"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+						<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">data = []
+num = input("Enter an integer ('q' to quit): ")
+while num != 'q':
+    data.append(int(num))
+    num = input("Enter an integer ('q' to quit): ")
+data.sort()
+print("The values, sorted into ascending order are:")
+for element in data:
+    print(element)</code></pre></div>
+				</section>
+
+				<section>
+					<h3>Iterating on a list</h3>
+					<p>The list is a <strong>sequence</strong> on which you can iterate.</p>
+					<p>With <strong>for</strong>:</p>
+					<div><pre class="solution-content python"><code>for element in ["foo", 11, "bar"]:
+    print(element)</code></pre></div>
+					<p>With <strong>while</strong>:</p>
+					<div><pre class="solution-content python"><code>my_list = ["foo", 11, "bar"]
+i=0
+while i < len(my_list):
+  print(my_list[i])
+  i+=1</code></pre></div>
+				</section>
+				<section>
+					<h3>Reminder about functions</h3>
+					<p>We define the function like this:</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;">def main():
+    print('The function', main.__name__, 'has been called')</code></pre>
+					<p>And we call the functions like this:</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;">main()</code></pre>
+					<p>NB: notice the brackets: when we define and when we call!</p>
+					<p>Try to use functions in the next exercises.</p>
+				</section>
+				<section>
+					<h3>Passing Lists to Functions</h3>
+					<div><pre class="solution-content python"><code>def printList(lst):
+    for element in lst:
+        print(element)
+
+# Invoke the function
+lst = [3, 1, 2, 6, 4, 2]
+printList(lst)</code></pre></div>
+				</section>
+				<section>
+					<h3>Returning a List from a Function</h3>
+					<p>Example: a function that returns a reversed list</p>
+					<div><pre class="solution-content python"><code>def reverse(lst):
+    result = []
+    for element in lst:
+        result.insert(0, element)
+    return result
+
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = reverse(list1)
+print(list2)</code></pre></div>
+					<p>The built in function <strong>reverse</strong> actually exists for doing the same thing</p>
+				</section>
+				<section>
+					<h3>Exercise</h3>
+					<p>Complete this program to get the minimum number of the list and its index</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">import random
+random_list = [random.choice(list(range(1, 100))) for _ in range(10)]
+def get_min(random_list):
+    # to complete
+    pass
+get_min(random_list)</code></pre>
+				</section>
+				<section>
+					<h3>Solution without using built in functions non list methods</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Solution</p>
+						<p class="hide-solution" style="margin-top: 0px; margin-bottom: 0px;"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+						<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">import random
+random_list = [random.choice(list(range(1, 100))) for _ in range(10)]
+def get_min_index(any_list):
+    min = 100
+    index = 0
+    for i in any_list:
+        if i <= min:
+            min = i
+            min_index = index
+        index += 1
+    print("the min is", min)
+    print("its index is", min_index)
+
+print(random_list)
+get_min_index(random_list)</code></pre></div>
+				</section>
+				<section>
+					<h3>Solution using built in functions and list methods</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Solution</p>
+						<p class="hide-solution" style="margin-top: 0px; margin-bottom: 0px;"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+						<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">import random
+random_list = [random.choice(list(range(1, 100))) for _ in range(10)]
+def get_min_index(any_list):
+    print("the min is", min(any_list))  # using the min builtin
+    print("its index is", random_list.index(min(random_list))) # using the index method
+
+print(random_list)
+get_min_index(random_list)</code></pre></div>
+				</section>
+
+				<section>
+					<h3>Manipulate element of a List with indexes</h3>
+					<p>You can also <strong>access</strong> element of a list with indexes <strong>BUT</strong> you can also <strong>modify</strong> them:</p>
+					<div><pre class="solution-content python"><code>my_list = ["foo", 11, "bar"]
+print(my_list)
+my_list[1] = "eleven"
+print(my_list)
+</code></pre></div>
+					<p>contrary to the string type.</p>
+					<div><pre class="solution-content python"><code>my_string = "abracadabra"
+my_string[0] = "O"
+print(my_string)</code></pre></div>
+				</section>
+				<section>
+					<h3>Difference between mutable and immutable objects</h3>
+					<ul>
+						<li>You cannot modify an <strong>immutable</strong> object such as a string.</li>
+						<li>You can modify a <strong>mutable</strong> object such as a list.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>The +, *, [ : ], and in Operators (1/2)</h3>
+					<p><strong>+</strong> is for concatenating list</p>
+					<p><strong>*</strong> is for repeating a list</p>
+					<p><strong>[ : ]</strong> is the slice operator, for extracting a sublist from a list</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">>>> list1 = [2, 3]
+>>> list2 = [1, 9]
+>>> list3 = list1 + list2
+>>> list3
+[2, 3, 1, 9]
+>>> list3 = 2 * list1
+>>> list3
+[2, 3, 2, 3]
+>>> list4 = list3[2:4]
+>>> list4
+[2, 3]</code></pre>
+				</section>
+				<section>
+					<h3>The +, *, [ : ], and in Operators (2/2)</h3>
+					<ul>
+						<li>Get the last element of a list with a negative index</li>
+						<li>Check if an element is in a list with the <strong>in</strong> operator</li>
+					</ul>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">>>> list1 = [2, 3, 5, 2, 33, 21]
+>>> list1[-1]
+21
+>>> list1[-3]
+2
+>>> list1 = [2, 3, 5, 2, 33, 21]
+>>> 2 in list1
+True
+>>> list1 = [2, 3, 5, 2, 33, 21]
+>>> 2.5 in list1
+False</code></pre>
+				</section>
+
+				<section>
+					<h3>Splitting a String to a List</h3>
+					<p>You can convert a string to a list with the <strong>split</strong> function on string.</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">>>> items = "Welcome to the UK".split()
+>>> print(items)
+['Welcome', 'to', 'the', 'UK']
+>>> items = "34#13#78#45".split("#")
+>>> print(items)
+['34', '13', '78', '45']</code></pre>
+					<p>You can convert back a list to a string with the <strong>join</strong> function  on string</p>
+					<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">>>> print(items)
+['Welcome', 'to', 'the', 'UK']
+>>> print(" ".join(items))
+'Welcome to the UK'
+</code></pre>
+				</section>
+				<section>
+				<p>
+					<h3>Exercise - Eliminate duplicates</h3>
+					<p>Write a function that returns a new list by eliminating the duplicate values in the list. Use the following function header:
+<pre class="solution-content python"><code>def eliminateDuplicates(lst):</code></pre></p>
+<p>Write a test program that reads in a list of integers, invokes the function, and displays the result. Here is the sample run of the program:</p>
+<pre>Enter ten numbers: 1 2 3 2 1 6 3 4 5 2
+The distinct numbers are: 1 2 3 6 4 5</pre>
+				</section>
+				<section>
+					<h3>Solution</h3>
+					<div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Solution</p>
+						<p class="hide-solution" style="margin-top: 0px; margin-bottom: 0px;"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+				<pre class="solution-content python"><code data-trim data-noescape style="line-height: 100%;font-size: 24px;margin-top: 0px; margin-bottom: 0px;">def main():
+    # Read numbers as a string from the console
+    s = input("Enter numbers: ")
+    items = s.split() # Extracts items from the string
+    numbers = [ int(x) for x in items ] # Convert items to numbers
+
+    print("The distinct numbers are:", eliminateDuplicates(numbers))
+
+def eliminateDuplicates(list):
+    result = []
+    for element in list:
+        if not (element in result):
+            result.append(element)
+
+    return result
+
+main()</code></pre></div>
+				</section>
+
+                <section>
+                    <h3>Dictionary</h3>
+                    <ul>
+                        <li>Why dictionary?</li>
+                        <li>Suppose your program stores a million students and frequently searches for a
+student using the social security number. An efficient data structure for this
+task is the dictionary. A dictionary is a collection that stores the elements
+along with the keys. The keys are like an indexer.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Key/value pairs</h3>
+                    <img src="imgs/dictionary.png" style="background:none; border:none; box-shadow:none; margin-top:0px;height: 500px"/>
+                </section>
+
+                <section>
+                    <h3>Creating a dictionary</h3>
+                    <p>Empty dictionary:</p>
+                    <div><pre class="solution-content python"><code>dictionary = {}
+# or
+dictionary = dict()</code></pre></div>
+                    <p>Populated dictionary:</p>
+                    <div><pre class="solution-content python"><code>dictionary = dict(john=40, peter=45)
+# or
+dictionary = {"john":40, "peter":45}
+# or
+dictionary = dict([('john',40), ('peter',45)])</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>Adding/Modifying Entries</h3>
+                    <p>To add an entry to a dictionary, use <strong>dictionary[key] = value</strong></p>
+                    <div><pre class="solution-content python"><code>>>> dictionary["susan"] = 50
+>>> print(dictionary)
+{'john': 40, 'susan': 50, 'peter': 45}</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>Deleting Entries</h3>
+                    <p>To delete an entry from a dictionary, use <strong>del dictionary[key]</strong> </p>
+                    <div><pre class="solution-content python"><code>>>> del dictionary[“susan”]
+>>> print(dictionary)
+{'john': 40, 'peter': 45}</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>Looping Entries</h3>
+                    <div><pre class="solution-content python"><code>for key in dictionary:
+ print(key + ":" + str(dictionary[key]))</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>The len and in operators</h3>
+                    <p><strong>len(dictionary)</strong> returns the number of the elements in the dictionary</p>
+                    <div><pre class="solution-content python"><code>>>> dictionary = {"john":40, "peter":45}
+>>> "john" in dictionary
+True
+>>> "johnson" in dictionary
+False
+>>> len(dictionary)
+2</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>The dictionary methods</h3>
+					<table style="width:100%;font-size: 28px">
+					  <tr>
+						<th style="width:30%">Methods</th>
+						<th>Meaning</th>
+					  </tr>
+					  <tr>
+						<td>list(dictionary.keys()): list</td>
+						<td>Returns a dict_keys type of object, that you can convert in a sequence of values with list(dictionary.keys())</td>
+					  </tr>
+					  <tr>
+						<td>list(dictionary.values()): list</td>
+						<td>Returns a dict_values type of object, that you can convert with list(dictionary.values())</td>
+					  </tr>
+					  <tr>
+						<td>list(dictionary.items()): tuple</td>
+						<td>Returns a dict_items type of object, that you can convert in a sequence of tuples (key, value) with list(dictionary.items()).</td>
+					  </tr>
+					  <tr>
+						<td>clear(): None</td>
+						<td>Deletes all entries.</td>
+					  </tr>
+					  <tr>
+						<td>get(key): value</td>
+						<td>Returns the value for the key.</td>
+					  </tr>
+					  <tr>
+						<td>pop(key): value</td>
+						<td>Removes the entry for the key and returns its value.</td>
+					  </tr>
+					</table>
+				</section>
+                <section>
+                    <h3>Exercise: dictionary manipulation</h3>
+                    <ol style="width:100%;font-size: 28px">
+                        <li>Create a dictionary that you put in a variable 'birthdays' with the following data:</li>
+	<pre>'Luke Skywalker': '5/24/19'
+'Obi-Wan Kenobi': '3/11/57'
+'Darth Vader':	'4/1/41'</pre>
+
+<li>Write if statements	that test to check if 'Yoda' and 'Darth	Vader' exist	as	keys	in
+the	dictionary,	then	enter	each	of	them	with	birthday	value	'unknown'	if	their	name
+    does	not	exist	as	a	key</li>
+<li>Display	all	the	key-value	pairs	in	the	dictionary,	one	per	line	with	a	space	between
+                        the	name	and	the	birthday,	by	looping	over	the	dictionary's	keys</li>
+                        <li>Delete	'Darth	Vader'	from	the	dictionary</li>
+<li>Bonus:	Make	the	same	dictionary	by	using dict() and	passing	in	the	initial	values when you	first create the	dictionary</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>Exercise: Guess the capital</h3>
+                    <ul>
+                        <li>Write a program that prompts the user to enter a capital for a random country.</li>
+                        <li>Upon receiving the user input, the program reports whether the answer is correct.</li>
+                        <li>The countries and their capitals are stored in a dictionary in <a href="exercises/list_of_countries.py">this file</a> (import it to use).</li>
+                        <li>The user’s answer is not case sensitive.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="solution">
+						<p class="show-solution"><i class="fa fa-eye" aria-hidden="true"></i>Solution</p>
+						<p class="hide-solution" style="margin-top: 0px; margin-bottom: 0px;"><i class="fa fa-eye-slash" aria-hidden="true"></i>Hide solution</p>
+						<pre class="solution-content python"><code data-trim data-noescape>import random
+
+from list_of_countries import COUNTRIES
+
+def main():
+    countries = list(COUNTRIES.keys())
+    country_to_guess = random.choice(countries)
+    capital = input("What is the capital of "
+                    + country_to_guess + "? ").strip()
+
+    if capital.lower() == COUNTRIES[country_to_guess]\
+            .lower():
+        print("Your answer is correct")
+    else:
+        print("The correct answer should be "
+              + COUNTRIES[country_to_guess])
+
+main()</code></pre></div>
+                </section>
+
+                <section>
+                    <h3>Objects: illustration with the String object</h3>
+					<ul>
+                        <li>In Python, all data —including numbers and strings— are actually objects.</li>
+						<li>An object is an entity. Each object has an <strong>id</strong> and a <strong>type</strong>.</li>
+						<pre style="line-height: 100%; font-size: 24px;"><code data-trim data-noescape>&gt;&gt;&gt; n = 3  # n is an integer
+&gt;&gt;&gt; id(n)
+10914432
+&gt;&gt;&gt; type(n)
+&lt;class &#39;int&#39;&gt;
+&gt;&gt;&gt; f = 3.0  # f is a float
+&gt;&gt;&gt; id(f)
+139757347082840
+&gt;&gt;&gt; type(f)
+&lt;class &#39;float&#39;&gt;
+&gt;&gt;&gt; s = "Welcome"  # s is a string
+&gt;&gt;&gt; id(s)
+139757323539824
+&gt;&gt;&gt; type(s)
+&lt;class &#39;str&#39;&gt;</code></pre>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Methods</h3>
+					<ul>
+						<li>You can perform operations on an object. The operations are defined using functions. The functions for the objects are called <em>methods</em> in Python. <strong>Methods can only be invoked from  a specific object</strong>, using the dot notation</li>
+						<pre><code data-trim data-noescape>&gt;&gt;&gt; s = "Welcome"
+&gt;&gt;&gt; s1 = s.lower()
+&gt;&gt;&gt; s1
+&#39;welcome&#39;
+&gt;&gt;&gt; s2 = s.upper()
+&gt;&gt;&gt; s2
+&#39;WELCOME&#39;
+&gt;&gt;&gt; </code></pre>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Seeing what methods are available</h3>
+					<ul>
+						<li>You can use the <strong>dir()</strong> introspection function to see what methods have been defined for an object</li>
+						<pre  style="line-height: 100%; font-size: 24px;"><code data-trim data-noescape>&gt;&gt;&gt; dir("example of string")
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__',
+'__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
+'__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__',
+'__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__',
+'__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__',
+'__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__',
+'__subclasshook__', 'capitalize', 'casefold', 'center', 'count',
+'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map',
+'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier',
+'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper',
+'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace',
+'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split',
+'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate',
+'upper', 'zfill']</code></pre>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The format() method</h3>
+					<ul>
+						<li>The <strong>format</strong> method helps to format the string</li>
+						<ul>
+							<li>Either with positional arguments:</li>
+						</ul>
+						<pre><code data-trim data-noescape>text = "During session {}, " \
+"we learned to use {} ".format(5, 'OOP')</code></pre>
+						<ul>
+							<li>Or with named arguments</li>
+						</ul>
+						<pre><code data-trim data-noescape>text = "During session {session_name}, " \
+"we learned to use {topic} ".format(session_name=5, topic='OOP')</code></pre>
+						<li>More information about string formating: <a href="https://pyformat.info/"> https://pyformat.info/</a></li>
+
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating our own Class</h3>
+						<p>Syntax: </p>
+						<pre><code data-trim data-noescape>class NameOfTheClass:
+    # the class body</code></pre>
+						<p>Example</p>
+						<pre><code data-trim data-noescape>class Employee:
+    pass</code></pre>
+				</section>
+
+				<section>
+					<h3>Creating instances of a class</h3>
+					<p>Instances are objects created from the class blueprint. When we create an object of a class, we say that we instantiate the object</p>
+						<p>Example:</p>
+						<pre><code data-trim data-noescape>class Employee:
+    pass
+
+employee1 = Employee()
+employee2 = Employee()
+print(type(employee1))
+print(employee1)</code></pre>
+				</section>
+
+				<section>
+					<h3>Attributes of an object</h3>
+					<ul>
+						<li>To add an attribute we can simply add an attribute with the dot notation and assign a value to the attribute</li>
+						<pre><code data-trim data-noescape>class Employee:
+    pass
+
+employee1 = Employee()
+employee1.name = "Matt"</code></pre>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The special initializer method</h3>
+					<ul>
+						<li>Instead of adding the attribute after creating our object, we can create them directly when creating the object, in the initializer method</li>
+						<pre><code data-trim data-noescape># class creation
+class Employee:
+    def __init__(self, name):
+        self.name = name
+
+#object creation
+employee1 = Employee('Matt')</code></pre>
+						<li>self represents the instance/object "employee1" here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Constructing Objects</h3>
+                    <ul>
+                        <li>Once a class is defined, you can create objects from the class by using the following syntax, called a <strong>constructor</strong>:</li>
+                    </ul>
+                    <div><pre class="solution-content python"><code>my_new_object = ClassName(optional_arguments)</code></pre></div>
+                    <img src="imgs/object_self.png" style="background:none; border:none; box-shadow:none; margin-top:0px;height: 300px"/>
+				</section>
+
+				<section>
+					<h3>Constructing Objects</h3>
+                    <p>The effect of constructing an Employee object with ...</p>
+                    <div><pre class="solution-content python"><code>employee1 = Employee(5)</code></pre></div>
+                    <p>... is shown below:</p>
+                    <img src="imgs/object_construct.png" style="background:none; border:none; box-shadow:none; margin-top:0px;height: 300px"/>
+
+				</section>
+
+				<section>
+					<h3>Exercise: adding attribute</h3>
+					<ul>
+						<li>Complete the previous code to create a new attribute "date_of_birth" to the Employee class, that will be "initialized"</li>
+						<li>Create 2 employee objects with a name and a date_of_birth and retrieve their date of birth</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Class attribute</h3>
+                    <ul>
+                        <li>Like Instances, Classes can also have attributes</li>
+                    </ul>
+                    <div><pre class="solution-content python"><code>class Employee:
+    count = 0
+    def __init__(self):
+        Employee.count += 1
+
+for i in range(3):
+    Employee()
+
+Employee.count</code></pre></div>
+				</section>
+
+				<section>
+					<h3>Instance Methods</h3>
+                    <ul>
+                        <li>Methods are <strong>functions defined inside a class</strong>. They are <strong>invoked by objects</strong> to
+perform actions on the objects.</li>
+                        <li>All the methods, including the constructor have the
+first parameter <strong>self</strong>, which refers to the object that invokes the method.</li>
+                    </ul>
+					<pre><code data-trim data-noescape>class Employee:
+    def __init__(self, name):
+        self.name = name
+    def generate_email_address(self):
+        return self.name + "@company.com"
+
+employee1 = Employee('Matt')
+# we call the method on the object
+employee1.generate_email_address()</code></pre>
+				</section>
+
+				<section>
+					<h3>Exercise: adding a method</h3>
+					<ul>
+						<li>Complete the previous code by adding an additional method (set_name) that will set a new name to the employee</li>
+						<li>You should call the method like so:</li>
+						<pre><code data-trim data-noescape>employee1.set_name("Bob")</code></pre>
+						<li>And when you retrieve the name of the employee1, it should say "Bob"</li>
+						<pre><code data-trim data-noescape>employee1.name</code></pre>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Accessing Objects</h3>
+                    <ul>
+                        <li>After an object is created, you can access its data fields and invoke its methods
+using the dot operator (.)</li>
+                    </ul>
+                    <div><pre class="solution-content python"><code># we create an employee object
+employee1 = Employee('Matt')
+# we call the method of the object using the dot notation
+employee1.generate_email_address()
+# we access one of the attribute of the object
+employee.name</code></pre></div>
+				</section>
+
+				<section>
+					<h3>UML Class Diagram</h3>
+                    <img src="imgs/uml.png" style="background:none; border:none; box-shadow:none; margin-top:0px;height: 500px"/>
+				</section>
+
+				<section>
+					<h3>Trace execution</h3>
+                    <p>See what is happening in memory with <a href="http://pythontutor.com/visualize.html#code=import%20math%0A%0Aclass%20Circle%3A%0A%20%20%20%20%23%20Construct%20a%20circle%20object%0A%20%20%20%20def%20__init__%28self,%20radius%20%3D%201%29%3A%0A%20%20%20%20%20%20%20%20self.radius%20%3D%20radius%0A%0A%20%20%20%20def%20getArea%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20self.radius%20*%20self.radius%20*%20math.pi%0A%20%20%20%20%20%20%20%20%0Amy_circle%20%3D%20Circle%285.0%29%0Ayour_circle%20%3D%20Circle%28%29%0Ayour_circle.radius%20%3D%20100&cumulative=false&heapPrimitives=false&mode=edit&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">Pythontutor</a> (click link)</p>
+				</section>
+
+				<section>
+					<h3>Example: Defining Classes and Creating Objects</h3>
+                    <img src="imgs/example_uml.png" style="background:none; border:none; box-shadow:none; margin-top:0px;height: 450px"/>
+				</section>
+
+				<section>
+					<h3>Example: Defining Classes and Creating Objects</h3>
+                    <ul>
+                        <li>See <a href="exercises/TV.py">TV.py</a> </li>
+                        <li>See <a href="exercises/TestTV.py">TestTV.py</a> </li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h3>Exercise - The Rectangle class</h3>
+                    <p style="font-size: 28px">Following the example of the Circle class, design a class named Rectangle to represent a rectangle. The class contains:</p>
+                    <ul style="font-size: 28px">
+                        <li>Two data fields named width and height.</li>
+                        <li>A constructor that creates a rectangle with the specified width and height.
+The default values are 1 and 2 for the width and height, respectively.</li>
+                        <li>A method named getArea() that returns the area of this rectangle</li>
+                        <li>A method named getPerimeter() that returns the perimeter</li>
+                    </ul>
+                    <p style="font-size: 28px">Implement the class. Write a test program that
+creates two Rectangle objects—one with width 4 and height 40 and the other with width 3.5 and
+height 35.7. Display the width, height, area, and perimeter of each rectangle in this order.</p>
+                </section>
+
+
 			</div>
 		</div>
 
